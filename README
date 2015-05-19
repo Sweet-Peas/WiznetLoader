@@ -1,12 +1,12 @@
-STM32Loader
+WiznetLoader
 ===========
 
-Python script which will talk to the STM32 bootloader to upload and download firmware.
+Python script which will talk to the custom SweetPeas bootloader.
 
-Original Version by: Ivan A-R <ivan@tuxotronic.org>
+Original Version (stm32loader) by: Ivan A-R <ivan@tuxotronic.org>
+Modified version by: P Oldberg (pontus@sweetpeas.se)
 
-
-Usage: ./stm32loader.py [-hqVewvr] [-l length] [-p port] [-b baud] [-a addr] [file.bin]
+Usage: ./wzloader.py [-hqVewvr] [-l length] [-p port] [-b baud] [-a addr] [file.bin]
     -h          This help
     -q          Quiet
     -V          Verbose
@@ -19,11 +19,11 @@ Usage: ./stm32loader.py [-hqVewvr] [-l length] [-p port] [-b baud] [-a addr] [fi
     -b baud     Baud speed (default: 115200)
     -a addr     Target address
 
-    ./stm32loader.py -e -w -v example/main.bin
+    ./wzloader.py -e -w -v example/main.bin
 
 
 Example:
-stm32loader.py -e -w -v somefile.bin
+wzloader.py -e -w -v somefile.bin
 
 This will pre-erase flash, write somefile.bin to the flash on the device, and then perform a verification after writing is finished.
 
