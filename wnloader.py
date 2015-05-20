@@ -46,11 +46,12 @@ chip_ids = {
     0x416: "STM32 Medium-density ultralow power line",
     0x411: "STM32F2xx",
     0x413: "STM32F4xx",
+    0x801: "Wiznet W7500",
 }
 
 def mdebug(level, message):
-    if(QUIET >= level):
-        print >> sys.stderr , message
+   if (QUIET >= level):
+       print >> sys.stderr , message
 
 
 class CmdException(Exception):
@@ -351,7 +352,7 @@ def usage():
     -v          Verify
     -r          Read
     -l length   Length of read
-    -p port     Serial port (default: /dev/tty.usbserial-ftCYPMYJ)
+    -p port     Serial port (default: /dev/ttyUSB0)
     -b baud     Baud speed (default: 115200)
     -a addr     Target address
     -g addr     Address to start running at (0x08000000, usually)
